@@ -2,6 +2,7 @@
 // DEFINE FUNCTION(S)
 // ==================================================
 function sum(num1, num2) {
+  if (num2 === undefined) num2 = 0;
   return num1 + num2;
 }
 
@@ -27,6 +28,8 @@ try {
   // Test Case 3
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = sum(1);
+  if (result !== 1) throw new Error('Expected sum(1) to be 1. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4
